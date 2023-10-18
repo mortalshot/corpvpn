@@ -1,0 +1,42 @@
+//<BUTTONS (a.btn+tab)>
+// Снипет (HTML): btn
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(8);
+	font-weight: 600;
+	font-size: rem(14);
+	line-height: math.div(22, 14);
+	text-align: center;
+	white-space: nowrap;
+	border-radius: rem(30);
+	padding: rem(10) rem(18);
+
+	// .btn_bg-orange
+	&_bg-orange {
+		background: linear-gradient(102deg, #ebb74f 10.65%, #dd9852 52.9%, #c090ef 96.73%);
+		color: $White;
+	}
+
+	// .btn_bg-violet
+	&_bg-violet {
+		color: $White;
+		background: linear-gradient(273deg, #ebb74f -4.64%, #dd9852 5.07%, #6724ba 31.32%);
+	}
+
+	// .btn_border-grey
+	&_border-grey {
+		color: #501fa4;
+		border: rem(2) solid rgba(46, 46, 48, 0.1);
+
+		@media (any-hover: hover) {
+			transition: $transition ease border-color 0s;
+
+			&:hover {
+				border-color: rgba($color: #501fa4, $alpha: 0.5);
+			}
+		}
+	}
+}

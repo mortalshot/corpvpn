@@ -1,0 +1,372 @@
+//====================================================================================================
+.header {
+	// position: sticky;
+	top: rem(10);
+	z-index: 20;
+	// opacity: 0;
+
+	// .header__container
+	&__container {
+	}
+
+	// .header__inner
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(24);
+		border-radius: rem(60);
+		background-color: #efefef;
+		padding: rem(26) rem(26) rem(26) rem(52);
+		@include adaptiveValue("padding-top", 26, 10);
+		@include adaptiveValue("padding-bottom", 26, 10);
+		@include adaptiveValue("padding-right", 26, 20);
+		@include adaptiveValue("padding-left", 26, 20);
+	}
+
+	// .header__left
+	&__left {
+		display: flex;
+		align-items: center;
+	}
+
+	// .header__logo
+	&__logo {
+		position: relative;
+		z-index: 6;
+
+		&:not(:last-child) {
+			margin-right: rem(36);
+			padding-right: rem(36);
+			border-right: rem(1) solid #d8d8d8;
+
+			@media (min-width: $mobile) {
+				@include adaptiveValue("margin-right", 36, 16, 1480, 992, 1);
+				@include adaptiveValue("padding-right", 36, 16, 1480, 992, 1);
+			}
+		}
+	}
+
+	// .header__menu
+	&__menu {
+		.menu__body {
+			@media (max-width: $mobile) {
+				position: fixed;
+				top: -100%;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background-color: #d9d9d9;
+				overflow-y: auto;
+				overflow-x: hidden;
+				padding: rem(100) rem(20) rem(40);
+				@include adaptiveValue("padding-top", 180, 110);
+				display: flex;
+				flex-direction: column;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				z-index: 5;
+				transition: 0.5s ease all 0s;
+
+				&::before {
+					content: "";
+					position: fixed;
+					left: 0;
+					right: 0;
+					top: -100%;
+					@include adaptiveValue("height", 140, 90);
+					background-color: #d9d9d9;
+					opacity: 0;
+					visibility: hidden;
+					pointer-events: none;
+					z-index: 5;
+					transition: 0.5s ease all 0s;
+				}
+
+				.menu-open & {
+					top: 0;
+					opacity: 1 !important;
+					visibility: visible;
+					pointer-events: all;
+
+					&::before {
+						opacity: 1 !important;
+						visibility: visible;
+						top: 0;
+					}
+				}
+
+				.icon-menu {
+					position: fixed;
+					top: rem(0);
+					left: rem(16);
+				}
+
+				ul {
+					display: grid;
+					justify-content: center;
+					gap: rem(30);
+					font-size: rem(16);
+					text-align: center;
+
+					&:not(:last-child) {
+						margin-bottom: rem(40);
+					}
+				}
+			}
+
+			& > ul {
+				@media (min-width: $mobile) {
+					display: flex;
+					align-items: center;
+					flex-wrap: wrap;
+					margin: rem(-5) rem(-10);
+					@include adaptiveValue("margin-left", -10, -0, 1480, 992, 1);
+					@include adaptiveValue("margin-right", -10, -0, 1480, 992, 1);
+
+					& > li {
+						padding: rem(5) rem(10);
+						@include adaptiveValue("padding-left", 10, 0, 1480, 992, 1);
+						@include adaptiveValue("padding-right", 10, 0, 1480, 992, 1);
+
+						& > a {
+							@include adaptiveValue("font-size", 14, 13, 992, 768, 1);
+							padding: rem(5);
+						}
+					}
+				}
+			}
+
+			a {
+				text-decoration: underline transparent from-font;
+				text-underline-offset: 3px;
+				transition: $transition ease text-decoration 0s;
+
+				@media (any-hover: hover) {
+					&:hover {
+						text-decoration: underline from-font;
+					}
+				}
+			}
+		}
+	}
+
+	// .header__right
+	&__right {
+		display: flex;
+		align-items: center;
+		gap: rem(16);
+	}
+
+	// .header__language
+	&__language {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-right", 28, 0, 1480, 992, 1);
+		}
+	}
+
+	// .header__contacts
+	&__contacts {
+		display: grid;
+		align-content: flex-start;
+		row-gap: rem(4);
+
+		span {
+			@media (min-width: $mobile) and (max-width: $tablet) {
+				display: none;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			justify-content: center;
+		}
+	}
+
+	// .header__button
+	&__button {
+		@media (max-width: $mobileM) {
+			display: flex;
+			justify-content: center;
+
+			&:not(:first-child) {
+				margin-top: rem(40);
+			}
+		}
+
+		a {
+			white-space: nowrap;
+
+			@media (any-hover: hover) {
+				&:hover {
+					i {
+						animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+					}
+				}
+			}
+		}
+	}
+}
+
+.logo {
+	display: inline-flex;
+	align-items: center;
+	
+	// .logo__link
+	&__link {
+		display: inline-flex;
+		gap: rem(10);
+		align-items: center;
+	}
+
+	// .logo__text
+	&__text {
+		@include adaptiveValue("font-size", 26, 20, 992, 768, 1);
+		text-transform: uppercase;
+	}
+}
+a.logo__link {
+	@media (any-hover: hover) {
+		transition: $transition ease opacity 0s;
+
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+}
+
+.language {
+	width: rem(20);
+	height: rem(20);
+	overflow: hidden;
+
+	@media (any-hover: hover) {
+		&:hover {
+			ul {
+				transform: translateY(-50%);
+			}
+		}
+	}
+
+	ul {
+		transition: 0.5s ease transform 0s;
+	}
+
+	a {
+		display: block;
+		width: rem(20);
+		height: rem(20);
+		border-radius: 50%;
+		overflow: hidden;
+	}
+}
+
+.contacts {
+	// .contacts__item
+	&__item {
+		a {
+			display: inline-flex;
+			align-items: center;
+			gap: rem(12);
+			font-size: rem(14);
+
+			i {
+				font-size: rem(20);
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: rem(42);
+				height: rem(42);
+				flex: 0 0 rem(42);
+				border-radius: 50%;
+				background-color: $White;
+			}
+
+			span {
+				text-decoration: underline transparent from-font;
+				text-underline-offset: 3px;
+				transition: $transition ease text-decoration 0s;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					i {
+						animation: shake-horizontal 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+					}
+
+					span {
+						text-decoration: underline from-font;
+					}
+				}
+			}
+		}
+
+		// .contacts__item_phone
+		&_phone {
+			a {
+				font-weight: 600;
+				white-space: nowrap;
+			}
+		}
+	}
+}
+
+.btn {
+	// .btn_orange
+	&_orange {
+	}
+}
+
+//====================================================================================================
+
+//Burger
+
+.icon-menu {
+	display: none;
+
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(20);
+		height: rem(12);
+		cursor: pointer;
+		z-index: 5;
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

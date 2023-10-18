@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="template1 _bg-blue">
+				<div class="template1__content">
+					<div class="template1__container">
+						<div class="template1__body">
+							<h1 class="template1__title">
+								<span style="color: #B16DFF;">The best VPN</span> for corporate clients any scales
+							</h1>
+
+							<div class="template1__text content">
+								<p>Discover professional user management with CorpVPN, scalable on- and offboarding options, and a multitude of security layers.</p>
+							</div>
+
+							<div class="template1__button">
+								<div class="btn btn_bg-orange">
+									<span>Download</span>
+
+									<select name="form[]" class="form">
+										<option value="windows" selected data-asset="@img/icons/windows.svg"></option>
+										<option value="flag1" data-asset="@img/icons/select-white.svg"></option>
+										<option value="flag2" data-asset="@img/icons/close.svg"></option>
+										<option value="flag3" data-asset="@img/icons/check.svg"></option>
+									</select>
+
+									<a id="windows" href="windowsLink" class="_active"></a>
+									<a id="flag1" href="flag1Link"></a>
+									<a id="flag2" href="flag2Link"></a>
+									<a id="flag3" href="flag2Link"></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="template1__animation">
+					@@include('html/template1-animation.htm',{})
+
+					<picture>
+						<source srcset="@img/template1/template1-bg-sm.png" media="(min-width: 574.98px)">
+						<img src="@img/template1/template1-bg.png" alt="" loading="lazy">
+					</picture>
+				</div>
+			</section>
+
+			<section class="template2">
+				<div class="template2__container">
+					<div class="template2__text _content">
+						<p>We at CorpVPN strongly believe that the internet could be more transparent, private, and secure. That’s why our engineers, system administrators, and designers have spent the last 10 years developing a VPN service powered by next-generation encryption to bring this vision closer to reality. </p>
+					</div>
+					<h2 class="template2__title _vertical-title">about us</h2>
+				</div>
+			</section>
+
+			<section class="template3" style="background-color: #F4F4F4;">
+				<div class="template3__container">
+					<div class="template3__heading">
+						<h2 style="color: #501FA4;">Corporate VPN is necessary solution in 2023 if you want to protect and get it more easy for managing your business</h2>
+					</div>
+
+					<div class="template3__items">
+						<div class="template3__item template3-item">
+							<div class="template3-item__image">
+								<img src="@img/template3/template3-card1-image.png" alt="" loading="lazy">
+							</div>
+							<div class="template3-item__body _content">
+								<h3>Protect</h3>
+								<p>Using a CorpVPN protects you from security breaches in many forms, including packet sniffing, rogue Wi-Fi networks, and man-in-the-middle attacks. </p>
+							</div>
+						</div>
+						<div class="template3__item template3-item">
+							<div class="template3-item__image">
+								<img src="@img/template3/template3-card2-image.png" alt="" loading="lazy">
+							</div>
+							<div class="template3-item__body _content">
+								<h3>Connect</h3>
+								<p>Our solutions provide possibilities to give remote employees access to internal applications and data, or to create a single shared network between multiple office locations.</p>
+							</div>
+						</div>
+						<div class="template3__item template3-item">
+							<div class="template3-item__image">
+								<img src="@img/template3/template3-card3-image.png" alt="" loading="lazy">
+							</div>
+							<div class="template3-item__body _content">
+								<h3>Scale</h3>
+								<p>Scale your business easily with our VPN solutions that help you connect all your sources employees, branches to one secure and safe network</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="template3__offer">
+						<div class="template3__text">Get consultation how our VPN solution can be used and connected to your business</div>
+						<div class="template3__button">
+							<a href="" class="btn btn_bg-violet">Get consultation</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="template4">
+				<div class="template4__container">
+					<div class="template4__heading">
+						<h2 style="text-align: center;">Prices</h2>
+					</div>
+
+					<div class="template4__items _row">
+						<div class="col-12 col-md-4">
+							<div class="template4__item template4-item">
+								<div class="template4-item__head">
+									<div class="template4-item__heading">
+										<div class="template4-item__plan">
+											<div class="template4-item__caption">Monthly plan</div>
+											<div class="template4-item__value">$120/mo</div>
+										</div>
+
+										<!-- <div class="template4-item__label"></div> -->
+									</div>
+									<!-- <div class="template4-item__billed"></div> -->
+								</div>
+								<div class="template4-item__body">
+									<ul class="template4-item__list">
+										<li>Unlimited devices</li>
+										<li>Anytime withdrawal</li>
+										<li>Full Support</li>
+										<li>You get 16 SMH</li>
+									</ul>
+								</div>
+								<div class="template4-item__footer">
+									<div class="template4-item__button">
+										<a href="" class="btn btn_border-grey">
+											<span>Get plan</span>
+											<i class="_icon-arrow-right1"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-4 template4__item_bg">
+							<div class="template4__item template4-item template4-item_bg">
+								<div class="template4-item__head">
+									<div class="template4-item__heading">
+										<div class="template4-item__plan">
+											<div class="template4-item__caption">Annual plan</div>
+											<div class="template4-item__value">$100/mo</div>
+										</div>
+
+										<div class="template4-item__label">Best <br> choise</div>
+									</div>
+									<div class="template4-item__billed">Billed $1200 first year</div>
+								</div>
+								<div class="template4-item__body">
+									<ul class="template4-item__list">
+										<li>Unlimited devices withdrawal</li>
+										<li>Anytime withdrawal</li>
+										<li>Full Support</li>
+										<li>You get 16 SMH</li>
+										<li>You get 16 SMH</li>
+									</ul>
+								</div>
+								<div class="template4-item__footer">
+									<div class="template4-item__button">
+										<a href="" class="btn btn_border-grey">
+											<span>Get plan</span>
+											<i class="_icon-arrow-right1"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-md-4">
+							<div class="template4__item template4-item">
+								<div class="template4-item__head">
+									<div class="template4-item__heading">
+										<div class="template4-item__plan">
+											<div class="template4-item__caption">3 year plan</div>
+											<div class="template4-item__value">$80/mo</div>
+										</div>
+
+										<!-- <div class="template4-item__label">Best <br> choise</div> -->
+									</div>
+									<div class="template4-item__billed">Billed $2860 first year</div>
+								</div>
+								<div class="template4-item__body">
+									<ul class="template4-item__list">
+										<li>Anytime withdrawal</li>
+										<li>Full Support</li>
+									</ul>
+								</div>
+								<div class="template4-item__footer">
+									<div class="template4-item__button">
+										<a href="" class="btn btn_border-grey">
+											<span>Get plan</span>
+											<i class="_icon-arrow-right1"></i>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="template5 _bg-blue">
+				<div class="template5__container">
+					<div class="template5__heading">
+						<h2 style="text-align: center;">Our advantages</h2>
+					</div>
+
+					<div class="template5__items _row">
+						<div class="col-12 col-xs-6 col-md-4">
+							<div class="template5__item template5-item">
+								<div class="template5-item__image">
+									<img src="@img/template5/template5-item1-image.png" alt="" loading="lazy">
+								</div>
+
+								<div class="template5-item__body">
+									<div class="template5-item__head">
+										<div class="template5-item__icon">
+											<img src="@img/template5/template5-item1-icon.svg" alt="" loading="lazy">
+										</div>
+
+										<div class="template5-item__caption">Ease</div>
+									</div>
+
+									<div class="template5-item__text _content">
+										<p>Discover professional user management with my.anydesk II, scalable on- and offboarding options, and a multitude of security layers.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xs-6 col-md-4">
+							<div class="template5__item template5-item">
+								<div class="template5-item__image">
+									<img src="@img/template5/template5-item2-image.png" alt="" loading="lazy">
+								</div>
+
+								<div class="template5-item__body">
+									<div class="template5-item__head">
+										<div class="template5-item__icon">
+											<img src="@img/template5/template5-item1-icon.svg" alt="" loading="lazy">
+										</div>
+
+										<div class="template5-item__caption">Lorem, <br> ipsum dolor.</div>
+									</div>
+
+									<div class="template5-item__text _content">
+										<p>Discover professional user management with my.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xs-6 col-md-4">
+							<div class="template5__item template5-item">
+								<div class="template5-item__image">
+									<img src="@img/template5/template5-item3-image.png" alt="" loading="lazy">
+								</div>
+
+								<div class="template5-item__body">
+									<div class="template5-item__head">
+										<div class="template5-item__icon">
+											<img src="@img/template5/template5-item1-icon.svg" alt="" loading="lazy">
+										</div>
+
+										<div class="template5-item__caption">Scalability</div>
+									</div>
+
+									<div class="template5-item__text _content">
+										<p>Discover professional user management with my.anydesk II, scalable on- and offboarding options, and a multitude of security layers.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xs-6 col-md-4">
+							<div class="template5__item template5-item">
+								<div class="template5-item__image">
+									<img src="@img/template5/template5-item4-image.png" alt="" loading="lazy">
+								</div>
+
+								<div class="template5-item__body">
+									<div class="template5-item__head">
+										<div class="template5-item__icon">
+											<img src="@img/template5/template5-item1-icon.svg" alt="" loading="lazy">
+										</div>
+
+										<div class="template5-item__caption">Ease</div>
+									</div>
+
+									<div class="template5-item__text _content">
+										<p>Discover professional user management with my.anydesk II, scalable on- and offboarding options, and a multitude of security layers.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xs-6 col-md-4">
+							<div class="template5__item template5-item">
+								<div class="template5-item__image">
+									<img src="@img/template5/template5-item5-image.png" alt="" loading="lazy">
+								</div>
+
+								<div class="template5-item__body">
+									<div class="template5-item__head">
+										<div class="template5-item__icon">
+											<img src="@img/template5/template5-item1-icon.svg" alt="" loading="lazy">
+										</div>
+
+										<div class="template5-item__caption">Ease</div>
+									</div>
+
+									<div class="template5-item__text _content">
+										<p>Discover professional user management with my.anydesk II, scalable on- and offboarding options, and a multitude of security layers.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xs-6 col-md-4">
+							<div class="template5__item template5-item">
+								<div class="template5-item__image">
+									<img src="@img/template5/template5-item6-image.png" alt="" loading="lazy">
+								</div>
+
+								<div class="template5-item__body">
+									<div class="template5-item__head">
+										<div class="template5-item__icon">
+											<img src="@img/template5/template5-item1-icon.svg" alt="" loading="lazy">
+										</div>
+
+										<div class="template5-item__caption">Ease</div>
+									</div>
+
+									<div class="template5-item__text _content">
+										<p>Discover professional user management with my.anydesk II, scalable on- and offboarding options, and a multitude of security layers.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="template6">
+				<div data-tabs data-tabs-animate class="template6__tabs tabs">
+					<div class="template6__head">
+						<div class="template6__content">
+							<div class="template6__container">
+								<div class="template6__body">
+									<h2 class="template6__title">Clients</h2>
+								</div>
+							</div>
+						</div>
+
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="submit" class="tabs__title _tab-active">
+								<img src="@img/template6/template6-tab1-button.svg" alt="" loading="lazy">
+							</button>
+							<button type="submit" class="tabs__title">
+								<img src="@img/template6/template6-tab2-button.svg" alt="" loading="lazy">
+							</button>
+							<button type="submit" class="tabs__title">
+								<img src="@img/template6/template6-tab3-button.png" alt="" loading="lazy">
+							</button>
+							<button type="submit" class="tabs__title">
+								<img src="@img/template6/template6-tab4-button.svg" alt="" loading="lazy">
+							</button>
+							<button type="submit" class="tabs__title">
+								<img src="@img/template6/template6-tab5-button.svg" alt="" loading="lazy">
+							</button>
+							<button type="submit" class="tabs__title">
+								<img src="@img/template6/template6-tab6-button.jpg" alt="" loading="lazy">
+							</button>
+							<button type="submit" class="tabs__title">
+								<img src="@img/template6/template6-tab7-button.svg" alt="" loading="lazy">
+							</button>
+						</nav>
+					</div>
+
+					<div data-tabs-body class="tabs__content">
+						<div class="tabs__body">
+							<div class="template6__container">
+								<div class="review">
+									<div class="review__stars">
+										<div class="review__star"><img src="@img/icons/star.svg" alt="" loading="lazy"></div>
+										<div class="review__star"><img src="@img/icons/star.svg" alt="" loading="lazy"></div>
+										<div class="review__star"><img src="@img/icons/star.svg" alt="" loading="lazy"></div>
+										<div class="review__star"><img src="@img/icons/star.svg" alt="" loading="lazy"></div>
+										<div class="review__star"><img src="@img/icons/star.svg" alt="" loading="lazy"></div>
+									</div>
+
+									<div class="review__text _content">
+										<p>Our solutions provide possibilities to give remote employees access to internal applications and data, or to create a single shared network between multiple office locations.</p>
+									</div>
+
+									<div class="review__author">Sergey Portnoy, CEO <br> AEG</div>
+								</div>
+							</div>
+						</div>
+						<div class="tabs__body">
+							<div class="template6__container">
+								<div class="review">
+									<div class="review__stars">
+										<div class="review__star"><img src="@img/icons/star.svg" alt="" loading="lazy"></div>
+										<div class="review__star"><img src="@img/icons/star.svg" alt="" loading="lazy"></div>
+										<div class="review__star"><img src="@img/icons/star.svg" alt="" loading="lazy"></div>
+									</div>
+
+									<div class="review__text">
+										<div class="_content">
+											<p>Our solutions provide possibilities to give remote employees access to internal applications and data, or to create a single shared network between multiple office locations.</p>
+											<p>Our solutions provide possibilities to give remote employees access to internal applications and data, or to create a single shared network between multiple office locations.</p>
+										</div>
+									</div>
+
+									<div class="review__author">Sergey Portnoy, CEO <br> SONY</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="template7">
+				<div class="template7__container">
+					<div class="template7__heading _content">
+						<h2 style="text-align: center;">FAQ</h2>
+					</div>
+
+					<div data-spollers class="template7__spollers spollers">
+						<div class="spollers__item _spoller-active">
+							<button type="button" data-spoller class="spollers__title">What is CorpVPN</button>
+							<div class="spollers__body">StrongVPN is a virtual private network (VPN). VPNs are a security tool that encrypt, or secure, all of your online activity. By funneling your internet encryption through a private tunnel, StrongVPN shields all of your private data from being viewed or tracked by outsiders, such as your ISP or cybercriminals.</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">How do you use CorpVPN</button>
+							<div class="spollers__body">StrongVPN is a virtual private network (VPN). VPNs are a security tool that encrypt, or secure, all of your online activity. By funneling your internet encryption through a private tunnel, StrongVPN shields all of your private data from being viewed or tracked by outsiders, such as your ISP or cybercriminals.</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">What does CorpVPN protect you from</button>
+							<div class="spollers__body">StrongVPN is a virtual private network (VPN). VPNs are a security tool that encrypt, or secure, all of your online activity. By funneling your internet encryption through a private tunnel, StrongVPN shields all of your private data from being viewed or tracked by outsiders, such as your ISP or cybercriminals.</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">How many devices can I use with CorpVPN</button>
+							<div class="spollers__body">StrongVPN is a virtual private network (VPN). VPNs are a security tool that encrypt, or secure, all of your online activity. By funneling your internet encryption through a private tunnel, StrongVPN shields all of your private data from being viewed or tracked by outsiders, such as your ISP or cybercriminals.</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">What does CorpVPN protect you from</button>
+							<div class="spollers__body">StrongVPN is a virtual private network (VPN). VPNs are a security tool that encrypt, or secure, all of your online activity. By funneling your internet encryption through a private tunnel, StrongVPN shields all of your private data from being viewed or tracked by outsiders, such as your ISP or cybercriminals.</div>
+						</div>
+						<div class="spollers__item">
+							<button type="button" data-spoller class="spollers__title">How do you use CorpVPN</button>
+							<div class="spollers__body">StrongVPN is a virtual private network (VPN). VPNs are a security tool that encrypt, or secure, all of your online activity. By funneling your internet encryption through a private tunnel, StrongVPN shields all of your private data from being viewed or tracked by outsiders, such as your ISP or cybercriminals.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
