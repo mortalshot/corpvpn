@@ -1772,7 +1772,6 @@ svg {
   display: flex;
   min-height: 100vh;
   padding-bottom: 0;
-  overflow: hidden;
   position: relative;
 }
 
@@ -3146,6 +3145,10 @@ svg {
     transition: 0.3s ease fill-opacity 0s;
   }
 
+  .template1 {
+    overflow: hidden;
+  }
+
   .template1__content {
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
@@ -3739,8 +3742,8 @@ svg {
 @media (max-width: 29.99875em) {
   .footer__menu {
     -webkit-box-flex: 0;
-        -ms-flex: 0 0 55%;
-            flex: 0 0 55%;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
   }
 
   .footer__picture {
