@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Support"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="template17">
+        <div class="template17__container">
+          <div class="template17__heading _content">
+            <h1 style="color: #B16DFF;">Contact us</h1>
+          </div>
+
+          <div class="template17__contacts _row">
+            <div class="col-12 col-md-6">
+              <div class="contacts__item contacts__item_phone">
+                <a href="tel:8005012030">
+                  <i class="_icon-phone"></i>
+                  <span>800 501 2030</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="contacts__item">
+                <div class="_content">
+                  <p><strong>Address</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6">
+              <div class="contacts__item contacts__item_email">
+                <a href="mailto:corpvpn@gmail.com">
+                  <i class="_icon-email"></i>
+                  <span>corpvpn@gmail.com</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="template17__text _content">
+            <p>Discover professional user management with CorpVPN, scalable on- and offboarding options, and a multitude of security layers.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="template13" style="background-color: #F4F4F4;">
+        <div class="template13__container">
+          <div class="template13__heading _content">
+            <h2 style="text-align: center;">We will answer any questions</h2>
+          </div>
+
+          <div class="template13__form">
+            <div class="template13__bg">
+              <img src="@img/template13/template13-bg.svg" alt="" loading="lazy">
+            </div>
+
+            <form action="" class="form">
+              <div class="form__row">
+                <div class="col-12 form__item">
+                  <input type="text" name="template13-name" placeholder="*Name" class="form__input" required />
+                </div>
+                <div class="col-12 form__item">
+                  <input type="email" name="template13-email" placeholder="*E-mail" class="form__input" required />
+                </div>
+                <div class="col-12 form__item">
+                  <textarea name="form[]" placeholder="Your problem" class="form__input" rows="7"></textarea>
+                </div>
+              </div>
+
+              <div class="form__submit">
+                <button type="submit" class="btn btn_bg-violet">
+                  <span>Send</span>
+                  <i class="_icon-link-arrow"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -18,12 +18,26 @@
 	&_bg-orange {
 		background: linear-gradient(102deg, #ebb74f 10.65%, #dd9852 52.9%, #c090ef 96.73%);
 		color: $White;
+
+		@media (any-hover: hover) {
+			transition: $transition ease opacity 0s;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
 	}
 
 	// .btn_bg-violet
 	&_bg-violet {
 		color: $White;
 		background: linear-gradient(273deg, #ebb74f -4.64%, #dd9852 5.07%, #6724ba 31.32%);
+
+		@media (any-hover: hover) {
+			transition: $transition ease opacity 0s;
+			&:hover {
+				opacity: 0.8;
+			}
+		}
 	}
 
 	// .btn_border-grey

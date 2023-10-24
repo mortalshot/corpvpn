@@ -942,8 +942,8 @@
     da.init();
     document.addEventListener("selectCallback", (function(e) {
         const currentSelect = e.detail.select;
-        if (currentSelect.closest(".template1__button")) {
-            const selectClosest = currentSelect.closest(".template1__button");
+        if (currentSelect.closest(".button-link")) {
+            const selectClosest = currentSelect.closest(".button-link");
             const selectValue = currentSelect.value;
             const buttonLinks = selectClosest.querySelectorAll("a");
             if (buttonLinks.length > 0) buttonLinks.forEach((link => {
@@ -1279,22 +1279,36 @@
             level1Timeline.repeat(-1);
         }
     }
-    function template1ChangeMargin() {
+    function firstChangeMargin() {
         const header = document.querySelector(".header");
         const wrapper = document.querySelector(".wrapper");
-        let headerHeight = getComputedStyle(header).height;
-        let wrapperPadding = getComputedStyle(wrapper).paddingTop;
-        let calcHeight = 0;
-        calcHeight = parseFloat(headerHeight) + parseFloat(wrapperPadding);
-        const template1 = document.querySelector(".template1");
-        template1.style.marginTop = `-${calcHeight}px`;
+        if (header) {
+            let headerHeight = getComputedStyle(header).height;
+            let wrapperPadding = getComputedStyle(wrapper).paddingTop;
+            let calcHeight = 0;
+            calcHeight = parseFloat(headerHeight) + parseFloat(wrapperPadding);
+            const first = document.querySelector("._first-section");
+            if (first) first.style.marginTop = `-${calcHeight}px`;
+        }
     }
+    const rangeInputs = document.querySelectorAll('input[type="range"]');
+    function handleInputChange(e) {
+        let target = e.target;
+        if ("range" !== e.target.type) target = document.getElementById("range");
+        const min = target.min;
+        const max = target.max;
+        const val = target.value;
+        target.style.backgroundSize = 100 * (val - min) / (max - min) + "% 100%";
+    }
+    rangeInputs.forEach((input => {
+        input.addEventListener("input", handleInputChange);
+    }));
     document.addEventListener("DOMContentLoaded", (function() {
-        template1ChangeMargin();
+        firstChangeMargin();
         gsapAnimation();
     }));
     window.addEventListener("resize", (function() {
-        template1ChangeMargin();
+        firstChangeMargin();
     }));
     window["FLS"] = true;
     isWebp();

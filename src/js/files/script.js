@@ -7,8 +7,8 @@ document.addEventListener("selectCallback", function (e) {
   // Селект 
   const currentSelect = e.detail.select;
 
-  if (currentSelect.closest('.template1__button')) {
-    const selectClosest = currentSelect.closest('.template1__button');
+  if (currentSelect.closest('.button-link')) {
+    const selectClosest = currentSelect.closest('.button-link');
     const selectValue = currentSelect.value;
     const buttonLinks = selectClosest.querySelectorAll('a');
 
@@ -22,6 +22,7 @@ document.addEventListener("selectCallback", function (e) {
   }
 });
 
+// gsap анимации
 function gsapAnimation() {
   const template1 = document.querySelector('.template1');
   if (template1 && window.innerWidth > 767.98) {
@@ -532,23 +533,46 @@ function gsapAnimation() {
 
 }
 
-function template1ChangeMargin() {
+// Добавляем отрицательный отступ для первой секции страницы
+function firstChangeMargin() {
   const header = document.querySelector('.header');
   const wrapper = document.querySelector('.wrapper');
-  let headerHeight = getComputedStyle(header).height;
-  let wrapperPadding = getComputedStyle(wrapper).paddingTop;
-  let calcHeight = 0;
-  calcHeight = parseFloat(headerHeight) + parseFloat(wrapperPadding);
 
-  const template1 = document.querySelector('.template1');
-  template1.style.marginTop = `-${calcHeight}px`;
+  if (header) {
+    let headerHeight = getComputedStyle(header).height;
+    let wrapperPadding = getComputedStyle(wrapper).paddingTop;
+    let calcHeight = 0;
+    calcHeight = parseFloat(headerHeight) + parseFloat(wrapperPadding);
+  
+    const first = document.querySelector('._first-section');
+    if (first) {
+      first.style.marginTop = `-${calcHeight}px`;
+    }
+  }
 }
 
+// Меняем цвет у range input
+const rangeInputs = document.querySelectorAll('input[type="range"]')
+function handleInputChange(e) {
+  let target = e.target
+  if (e.target.type !== 'range') {
+    target = document.getElementById('range')
+  }
+  const min = target.min
+  const max = target.max
+  const val = target.value
+
+  target.style.backgroundSize = (val - min) * 100 / (max - min) + '% 100%'
+}
+
+rangeInputs.forEach(input => {
+  input.addEventListener('input', handleInputChange)
+})
 
 document.addEventListener('DOMContentLoaded', function () {
-  template1ChangeMargin();
+  firstChangeMargin();
   gsapAnimation();
 })
 window.addEventListener('resize', function () {
-  template1ChangeMargin();
+  firstChangeMargin();
 })
